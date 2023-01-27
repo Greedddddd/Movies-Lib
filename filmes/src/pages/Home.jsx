@@ -11,18 +11,18 @@ const Home = () => {
         const res = await fetch(url);
         const data = await res.json();
 
-        console.log(data);
+        setTopMovies(data.results);;
     };
 
     useEffect(() => {
         const topRatedurl = `${moviesURL}top_rated?${apiKey}`;
 
-        console.log(topRatedurl);
+        getTopRatedMovies(topRatedurl);
     }, []);
 
     return(
-        <div>Home</div>
-    )
-}
+        <div>{topMovies && topMovies((movie) => <p>{movie.title}</p>)}</div>
+     );
+};
 
 export default Home
