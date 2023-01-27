@@ -11,17 +11,17 @@ const Home = () => {
         const res = await fetch(url);
         const data = await res.json();
 
-        setTopMovies(data.results);;
+        setTopMovies(data.results);
     };
 
     useEffect(() => {
-        const topRatedurl = `${moviesURL}top_rated?${apiKey}`;
+        const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
 
-        getTopRatedMovies(topRatedurl);
+        getTopRatedMovies(topRatedUrl);
     }, []);
 
     return(
-        <div>{topMovies && topMovies((movie) => <p>{movie.title}</p>)}</div>
+        <div>{topMovies && topMovies.map((movie) => <p>{movie.title}</p>)}</div>
      );
 };
 
