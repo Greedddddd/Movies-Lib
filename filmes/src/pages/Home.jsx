@@ -8,11 +8,17 @@ const Home = () => {
 
     const getTopRatedMovies = async (url) => {
 
-        const res = await fetch(url)
-        const data = await res.json()
+        const res = await fetch(url);
+        const data = await res.json();
 
         console.log(data);
     };
+
+    useEffect(() => {
+        const topRatedurl = `${moviesURL}top_rated?${apiKey}`;
+
+        console.log(topRatedurl);
+    }, []);
 
     return(
         <div>Home</div>
