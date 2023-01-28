@@ -44,7 +44,7 @@
     color: #f7d354;
 } 
 
-.movies-container div{
+.movies-container div a{
     background-color: #f7d354;
     border: 2px solid #f7d354;
     border-radius: 4px;
