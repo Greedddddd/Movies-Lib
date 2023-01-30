@@ -11,9 +11,9 @@ const Navbar = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       
-      if (!search) return 
+      if (!search) return; 
 
-      navigat(`/search?q=${search}`);
+      navigate(`/search?q=${search}`);
       setSearch("");
     };
 
